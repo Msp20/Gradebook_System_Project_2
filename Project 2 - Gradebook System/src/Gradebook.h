@@ -2,22 +2,23 @@
  * Author: Mihir Patel
  */
 #include <iostream>
+#include <string>
 #ifndef GRADEBOOK_H_
 #define GRADEBOOK_H_
-
+namespace std{
 class Gradebook {
 
 
 public:
-	Gradebook(string course, int studentMax, double examAvg, double quiz Avg, double homeworkAvg);
+	Gradebook(string course, const int studentMax, double examAvg, double quizAvg, double homeworkAvg);
+	Gradebook();
 
-	//
 
 private:
 
 	string courseTitle;
-	int studentArray;
-	int studentMax;
+	static const int STUDENTMAX = 15;
+	int studentArray[STUDENTMAX];
 	double examAvg;
 	double quizAvg;
 	double homeworkAvg;
@@ -27,5 +28,5 @@ private:
 
 
 };
-
+}
 #endif /* GRADEBOOK_H_ */
