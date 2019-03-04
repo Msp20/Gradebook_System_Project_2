@@ -7,7 +7,11 @@
 namespace std {
 
 Student::Student() {
-	// TODO Auto-generated constructor stub
 
 }
+
+Student::Student(string name) {
+	this->name = name;
+}
+
 }
